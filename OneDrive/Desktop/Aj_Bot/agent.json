@@ -1,0 +1,9 @@
+{
+  "description": "AJ Helper Bot for affiliate support and smart responses",
+  "language": "en",
+  "shortDescription": "Affiliate and marketing assistant",
+  "enableLogging": true,
+  "mlMinConfidence": 0.3,
+  "disableStackdriverLogs": false,
+  "defaultTimezone": "America/New_York"
+}

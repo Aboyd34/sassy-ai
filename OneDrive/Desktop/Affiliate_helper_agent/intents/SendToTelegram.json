@@ -1,0 +1,26 @@
+{
+  "displayName": "SendToTelegram",
+  "messages": [
+    {
+      "text": {
+        "text": [
+          "Message sent to your Telegram! Like a boss."
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Zoom! Message delivered to Telegram."
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Telegram? Sent. You movin' like a pro."
+        ]
+      }
+    }
+  ]
+}

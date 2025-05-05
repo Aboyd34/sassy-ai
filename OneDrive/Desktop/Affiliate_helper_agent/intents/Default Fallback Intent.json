@@ -1,0 +1,26 @@
+{
+  "displayName": "Default Fallback Intent",
+  "messages": [
+    {
+      "text": {
+        "text": [
+          "Huh? Say that again, champ."
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Didn\u2019t catch that. Mind tryna one more time?"
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Hold up, lemme run that back."
+        ]
+      }
+    }
+  ]
+}

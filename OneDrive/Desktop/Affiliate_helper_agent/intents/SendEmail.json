@@ -1,0 +1,26 @@
+{
+  "displayName": "SendEmail",
+  "messages": [
+    {
+      "text": {
+        "text": [
+          "Email sent! Check your inbox, playa."
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Boom. Your email\u2019s out the door."
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Sent that email faster than a text."
+        ]
+      }
+    }
+  ]
+}

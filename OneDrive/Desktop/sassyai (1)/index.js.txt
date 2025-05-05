@@ -1,0 +1,61 @@
+require('dotenv').config();
+const express = require('express');
+const { WebhookClient } = require('dialogflow-fulfillment');
+const nodemailer = require('nodemailer');
+const axios = require('axios');
+
+const app = express();
+app.use(express.json());
+
+app.post('/webhook', (req, res) => {
+  const agent = new WebhookClient({ request: req, response: res });
+
+  function sendDropshippingAlert(agent) {
+    const message = 'New dropshipping order detected!';
+    sendTelegramMessage(message);
+    sendEmail('Dropshipping Alert', message);
+    agent.add('Dropshipping alert sent!');
+  }
+
+  // Example: intent map
+  let intentMap = new Map();
+  intentMap.set('SendDropshippingAlert', sendDropshippingAlert);
+
+  agent.handleRequest(intentMap);
+});
+
+function sendTelegramMessage(message) {
+  const telegramToken = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  const url = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
+
+  axios.post(url, {
+    chat_id: chatId,
+    text: message,
+  }).catch(err => console.error("Telegram Error:", err));
+}
+
+function sendEmail(subject, text) {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  transporter.sendMail({
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_TO,
+    subject,
+    text,
+  }, (err, info) => {
+    if (err) return console.error("Email Error:", err);
+    console.log('Email sent:', info.response);
+  });
+}
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Sassy AI webhook running on port ${PORT}');
+});

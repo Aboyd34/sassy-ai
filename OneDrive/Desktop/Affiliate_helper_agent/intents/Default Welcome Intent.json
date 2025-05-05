@@ -1,0 +1,26 @@
+{
+  "displayName": "Default Welcome Intent",
+  "messages": [
+    {
+      "text": {
+        "text": [
+          "Ayyy welcome back! What we hustlin' today?"
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Good to see you, boss. What's the move?"
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Back at it again! What you tryna cook up?"
+        ]
+      }
+    }
+  ]
+}

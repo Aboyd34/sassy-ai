@@ -1,0 +1,11 @@
+{
+  "description": "Affiliate helper bot",
+  "language": "en",
+  "shortDescription": "Affiliate Marketing & DNS Helper",
+  "googleAssistant": {
+    "googleAssistantCompatible": false
+  },
+  "defaultTimezone": "America/New_York",
+  "projectId": "affiliate-helper-bot",
+  "enableLogging": true
+}

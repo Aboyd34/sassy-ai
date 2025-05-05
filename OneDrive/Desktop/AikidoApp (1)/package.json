@@ -1,0 +1,14 @@
+{
+  "name": "aikidoapp",
+  "version": "1.0.0",
+  "description": "Aikido app on Azure Free Tier",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Sarah",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "displayName": "DNSHelp",
+  "messages": [
+    {
+      "text": {
+        "text": [
+          "Need help with DNS? I got you, fam."
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "DNS lookin' messy? Let's clean it up together."
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "DNS setup? Easy. Just follow my lead."
+        ]
+      }
+    }
+  ]
+}
