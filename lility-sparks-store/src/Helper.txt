@@ -1,0 +1,14 @@
+const pendingRequests = new Map();
+
+export default function coalescedFetch(key, fetchFunction) {
+  if (pendingRequests.has(key)) {
+    return pendingRequests.get(key);
+  }
+
+  const promise = fetchFunction().finally(() => {
+    pendingRequests.delete(key);
+  });
+
+  pendingRequests.set(key, promise);
+  return promise;
+}
